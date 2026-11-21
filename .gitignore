@@ -1,0 +1,7 @@
+# PlatformIO build output
+.pio/
+*.elf
+*.bin
+# editor
+.vscode/
+.DS_Store

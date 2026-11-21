@@ -1,0 +1,177 @@
+{
+  "theme": "dark",
+  "parts": {
+    "U1": {
+      "name": "T-Display ESP32 1.14in",
+      "pins": {
+        "3V3": "",
+        "GND": "",
+        "13": "GPIO13",
+        "15": "GPIO15",
+        "17": "GPIO17",
+        "21": "GPIO21 RX2",
+        "22": "GPIO22 TX2",
+        "25": "GPIO25",
+        "26": "GPIO26",
+        "27": "GPIO27",
+        "32": "GPIO32",
+        "33": "GPIO33",
+        "37": "GPIO37",
+        "38": "GPIO38"
+      }
+    },
+    "U2": {
+      "name": "PN532 NFC V3 (HSU, DIP 0|0)",
+      "pins": {
+        "J1-1": "GND",
+        "J1-2": "VCC",
+        "J1-3": "TXD",
+        "J1-4": "RXD",
+        "J2-7": "IRQ"
+      }
+    },
+    "U3": {
+      "name": "2.4in TFT ST7789 + EC11",
+      "pins": {
+        "1": "K0",
+        "2": "PUSH",
+        "3": "B",
+        "4": "A",
+        "5": "BLK",
+        "6": "CS",
+        "7": "DC",
+        "8": "RES",
+        "9": "SDA",
+        "10": "SCL",
+        "11": "VCC",
+        "12": "GND"
+      }
+    },
+    "R1": {
+      "name": "10k pull-up",
+      "pins": {
+        "1": "",
+        "2": ""
+      }
+    }
+  },
+  "nets": [
+    {
+      "name": "3V3",
+      "color": "red",
+      "pins": [
+        "U1.3V3",
+        "U2.J1-2",
+        "U3.11",
+        "U3.5",
+        "R1.2"
+      ]
+    },
+    {
+      "name": "GND",
+      "color": "black",
+      "pins": [
+        "U1.GND",
+        "U2.J1-1",
+        "U3.12"
+      ]
+    },
+    {
+      "name": "PN_TXD",
+      "color": "blue",
+      "pins": [
+        "U1.21",
+        "U2.J1-3"
+      ]
+    },
+    {
+      "name": "PN_RXD",
+      "color": "yellow",
+      "pins": [
+        "U1.22",
+        "U2.J1-4"
+      ]
+    },
+    {
+      "name": "NFC_IRQ",
+      "color": "white",
+      "pins": [
+        "U1.37",
+        "U2.J2-7"
+      ]
+    },
+    {
+      "name": "TFT_SCK",
+      "color": "orange",
+      "pins": [
+        "U1.25",
+        "U3.10"
+      ]
+    },
+    {
+      "name": "TFT_MOSI",
+      "color": "green",
+      "pins": [
+        "U1.26",
+        "U3.9"
+      ]
+    },
+    {
+      "name": "TFT_CS",
+      "color": "brown",
+      "pins": [
+        "U1.27",
+        "U3.6"
+      ]
+    },
+    {
+      "name": "TFT_DC",
+      "color": "violet",
+      "pins": [
+        "U1.33",
+        "U3.7"
+      ]
+    },
+    {
+      "name": "TFT_RST",
+      "color": "grey",
+      "pins": [
+        "U1.32",
+        "U3.8"
+      ]
+    },
+    {
+      "name": "ENC_A",
+      "color": "pink",
+      "pins": [
+        "U1.13",
+        "U3.4"
+      ]
+    },
+    {
+      "name": "ENC_B",
+      "color": "green",
+      "pins": [
+        "U1.17",
+        "U3.3"
+      ]
+    },
+    {
+      "name": "ENC_PUSH",
+      "color": "white",
+      "pins": [
+        "U1.15",
+        "U3.2"
+      ]
+    },
+    {
+      "name": "KEY0",
+      "color": "grey",
+      "pins": [
+        "U1.38",
+        "U3.1",
+        "R1.1"
+      ]
+    }
+  ]
+}
